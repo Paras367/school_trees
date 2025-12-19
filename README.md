@@ -49,7 +49,7 @@ Each tree page is accessible using its respective QR code.
 ---
 
 ## 🌳 Sample Tree Page
-Example:(https://paras367.github.io/school_trees/mango.html)[https://paras367.github.io/school_trees/mango.html]
+Example:[Mango Tree Page](https://paras367.github.io/school_trees/mango.html)
 
 ---
 
