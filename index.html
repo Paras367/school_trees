@@ -12,19 +12,19 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f2fff2;
+            background: linear-gradient(to bottom, #e8f5e9, #ffffff);
             margin: 0;
             padding: 15px;
             color: #1b3b1b;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
             background: white;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
         .logos {
@@ -35,13 +35,38 @@
         }
 
         .logos img {
-            height: 80px;
+            height: 75px;
+        }
+
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin: 25px 0;
+        }
+
+        .nav-links a {
+            background: #e8f5e9;
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: bold;
+            color: #1b5e20;
+            text-decoration: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+        }
+
+        .nav-links a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+            background: #c8e6c9;
         }
 
         h1 {
             text-align: center;
             color: #2e7d32;
-            margin-top: 15px;
+            margin-top: 18px;
         }
 
         h2 {
@@ -63,9 +88,10 @@
 
         .highlight {
             background: #e8f5e9;
-            padding: 15px;
+            padding: 16px;
             border-left: 6px solid #2e7d32;
             margin-top: 15px;
+            border-radius: 8px;
         }
 
         .link-box {
@@ -76,19 +102,18 @@
 
         a {
             color: #1b5e20;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
         }
 
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 35px;
             font-size: 14px;
             color: #555;
+        }
+
+        footer img {
+            height: 65px;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -108,9 +133,18 @@
 
     <p style="text-align:center;">
         <b>NSS Eco Awareness Initiative</b><br>
-        This project is created by <b>NSS Volunteers</b> of<br>
+        Created by <b>NSS Volunteers</b> of<br>
         <b>SAINT SOLDIERS INTERNATIONAL SCHOOL, CHD 28</b>
     </p>
+
+    <!-- 🔗 NAVIGATION SECTION -->
+    <div class="nav-links">
+        <a href="list.html">🌳 Tree List</a>
+        <a href="about.html">ℹ️ About Project</a>
+        <a href="security.html">🔒 Security</a>
+        <a href="tc.html">📜 Terms & Policy</a>
+        <a href="credits.html">🤝 Credits</a>
+    </div>
 
     <h2>📌 Project Overview</h2>
     <p>
@@ -144,28 +178,11 @@
         <li>GitHub Pages (Free Web Hosting)</li>
         <li>QR Codes (Static, Permanent)</li>
     </ul>
-    <p><i>No paid services or domains are used.</i></p>
-
-    <h2>🌐 Live Website</h2>
-    <div class="link-box">
-        👉 <a href="https://paras367.github.io/school_trees/" target="_blank">
-        https://paras367.github.io/school_trees/
-        </a>
-    </div>
-    <p style="text-align:center;">
-        Each tree page is accessible using its respective QR code.
-    </p>
 
     <h2>🌳 Sample Tree Page</h2>
     <div class="link-box">
-        <a href="https://paras367.github.io/school_trees/mango.html">🍋 Mango Tree Page</a>
+        👉 <a href="mango.html">🍋 Mango Tree Page</a>
     </div>
-
-    <h2>🤝 Credits</h2>
-    <p style="text-align:center;">
-        <b>MADE BY NSS VOLUNTEERS</b><br>
-        SAINT SOLDIERS INTERNATIONAL SCHOOL, CHD 28
-    </p>
 
     <div class="highlight" style="text-align:center; font-weight:bold;">
         🌍 Save Trees, Save Life 🌍<br>
@@ -173,9 +190,11 @@
     </div>
 
     <footer>
-          <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" alt="School Logo">
+        <a href="https://ssis.ac.in/" target="_blank">
+            <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" alt="School Logo">
+        </a>
         <br>
-        NSS Eco Awareness Initiative
+        NSS Eco Awareness Initiative | BY – PARAS DHIMAN
     </footer>
 
 </div>
