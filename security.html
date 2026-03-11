@@ -2,220 +2,1114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Security Policy | NSS Tree QR Awareness Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Favicon -->
+    <title>Security Policy | NSS Tree QR Awareness Project | Saint Soldiers International School</title>
+    <meta name="title" content="Security & Privacy Policy | NSS Tree QR Project">
+    <meta name="description" content="Official security policy for the NSS Tree QR Awareness Project. Learn about our privacy-first approach, data protection measures, and legal compliance under IT Act 2000.">
+    <meta name="keywords" content="NSS, security policy, privacy, QR code safety, GitHub Pages, IT Act 2000, Saint Soldiers International School, Chandigarh, Paras Dhiman, SoftwareLabs">
+    <meta name="author" content="Paras Dhiman">
+    <meta name="school" content="Saint Soldiers International School, Chandigarh - 28">
+    <meta name="organization" content="National Service Scheme (NSS), Government of India">
+    <meta name="theme-color" content="#2e7d32">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ssis.ac.in">
+    <meta property="og:title" content="Security & Privacy Policy | NSS Tree QR Project">
+    <meta property="og:description" content="Our commitment to privacy, security, and ethical content usage. Learn about our protective measures and legal compliance.">
+    <meta property="og:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+    <meta property="og:site_name" content="Saint Soldiers International School - NSS Portal">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ssis.ac.in">
+    <meta property="twitter:title" content="Security & Privacy Policy | NSS Tree QR Project">
+    <meta property="twitter:description" content="Our commitment to privacy, security, and ethical content usage.">
+    <meta property="twitter:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Security & Privacy Policy",
+      "description": "Official security policy for NSS Tree QR Awareness Project",
+      "publisher": {
+        "@type": "EducationalOrganization",
+        "name": "Saint Soldiers International School",
+        "url": "https://ssis.ac.in"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Paras Dhiman",
+        "jobTitle": "Founder, SoftwareLabs",
+        "url": "https://softwarelabschd.github.io/softwarelabs"
+      },
+      "license": "Educational Use Only",
+      "copyrightNotice": "Content protected under IT Act 2000, Government of India"
+    }
+    </script>
+
     <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f8f5;
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #388e3c;
+            --light-green: #e8f5e9;
+            --accent-orange: #d84315;
+            --warning-red: #c62828;
+            --dark-text: #2b3a32;
+            --light-text: #555;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 10px rgba(0,0,0,0.12);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.15);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
             margin: 0;
-            padding: 18px;
-            color: #2b3a32;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', 'Merriweather', Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f8f5 0%, #e8f5e9 50%, #ffffff 100%);
+            margin: 0;
+            padding: 15px;
+            color: var(--dark-text);
+            line-height: 1.7;
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
+        .bg-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .leaf {
+            position: absolute;
+            color: rgba(46, 125, 50, 0.12);
+            font-size: 1.8rem;
+            animation: float 20s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-100px) rotate(720deg) scale(1.2); opacity: 0; }
+        }
+        
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
-            background: #ffffff;
-            border-radius: 16px;
-            padding: 26px;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+            background: rgba(255, 255, 255, 0.96);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(46, 125, 50, 0.25);
         }
-
+        
+        /* Header & Logos */
+        .header-section {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--light-green);
+            margin-bottom: 25px;
+        }
+        
         .logos {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            gap: 25px;
+            margin: 15px 0;
         }
-
+        
         .logos img {
-            height: 70px;
-            transition: transform 0.2s ease;
+            height: 75px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
         }
-
+        
         .logos img:hover {
-            transform: scale(1.05);
+            transform: scale(1.06);
         }
-
+        
         .school-logo {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
         }
-
+        
         .school-link {
-            font-size: 14px;
-            margin-top: 6px;
+            font-size: 0.9rem;
+            margin-top: 4px;
         }
-
+        
         .school-link a {
-            color: #1b5e20;
+            color: var(--primary-green);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+            padding: 4px 10px;
+            border-radius: 20px;
         }
-
+        
         .school-link a:hover {
-            text-decoration: underline;
+            background: var(--light-green);
+            color: var(--secondary-green);
         }
-
+        
         h1 {
             text-align: center;
-            color: #2e7d32;
-            margin-bottom: 6px;
+            color: var(--primary-green);
+            margin: 20px 0 10px;
+            font-size: 2.1rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
         }
-
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 4px;
+            background: var(--secondary-green);
+            border-radius: 2px;
+        }
+        
         .subtitle {
             text-align: center;
-            font-weight: bold;
-            color: #c62828;
-            margin-bottom: 18px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 12px 0 25px;
+            font-size: 1.15rem;
+            letter-spacing: 0.3px;
+            padding: 10px 15px;
+            background: rgba(198, 40, 40, 0.08);
+            border-radius: 12px;
+            display: inline-block;
+            width: 100%;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
+        
+        .subtitle i {
+            margin-right: 6px;
+            color: var(--primary-green);
+        }
+        
+        /* Project Type Badges - NEW FEATURE */
+        .project-badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 20px 0 30px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            background: var(--white);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            box-shadow: var(--shadow-sm);
+            border: 2px solid var(--light-green);
+            transition: var(--transition);
+        }
+        
+        .badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-green);
+        }
+        
+        .badge.nss { background: linear-gradient(135deg, #e3f2fd, #bbdefb); color: #1565c0; border-color: #90caf9; }
+        .badge.school { background: linear-gradient(135deg, #fff8e1, #ffecb3); color: #5d4037; border-color: #ffd54f; }
+        .badge.individual { background: linear-gradient(135deg, #f3e5f5, #e1bee7); color: #4a148c; border-color: #ba68c8; }
+        
+        /* Content Sections */
         h2 {
-            color: #1b5e20;
-            margin-top: 22px;
+            color: var(--secondary-green);
+            margin: 35px 0 18px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--light-green);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.7rem;
         }
-
-        p, li {
-            line-height: 1.8;
+        
+        h2 i {
+            color: var(--primary-green);
+            font-size: 1.6rem;
         }
-
+        
+        p {
+            margin: 12px 0;
+            font-size: 1.05rem;
+        }
+        
         ul {
-            margin-left: 20px;
+            margin: 15px 0 15px 25px;
+            line-height: 1.9;
         }
-
+        
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 28px;
+        }
+        
+        ul li::before {
+            content: "🔒";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.95rem;
+        }
+        
+        /* Policy Box */
         .policy-box {
-            background: #e8f5e9;
-            padding: 14px 18px;
-            border-left: 5px solid #2e7d32;
-            border-radius: 8px;
-            margin-top: 16px;
+            background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+            padding: 20px;
+            border-left: 5px solid var(--primary-green);
+            border-radius: 0 12px 12px 0;
+            margin: 20px 0;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .policy-box::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(46,125,50,0.08) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .policy-box > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .policy-box ul li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            left: -3px;
+        }
+        
+        /* Security Features Grid */
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin: 25px 0;
+        }
+        
+        .security-card {
+            background: var(--white);
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--light-green);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .security-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--secondary-green);
+            transition: var(--transition);
+        }
+        
+        .security-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-green);
+        }
+        
+        .security-card:hover::before {
+            width: 100%;
+            opacity: 0.1;
+        }
+        
+        .security-icon {
+            font-size: 2.2rem;
+            color: var(--primary-green);
+            margin-bottom: 14px;
+            display: block;
+        }
+        
+        .security-title {
+            font-weight: 600;
+            color: var(--dark-text);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .security-desc {
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+        
+        /* Content Awareness Box */
+        .content-awareness {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 25px 0;
+            position: relative;
+        }
+        
+        .content-awareness::before {
+            content: "👁️";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            font-size: 2rem;
+            background: var(--white);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .content-awareness ul li::before {
+            content: "📋";
+            color: #f57c00;
+            font-weight: bold;
+            left: -5px;
+        }
+        
+        /* Legal Warning Box - NEW FEATURE */
+        .legal-warning {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            border: 2px solid var(--warning-red);
+            border-radius: 16px;
+            padding: 22px;
+            margin: 30px 0;
+            position: relative;
+            text-align: center;
+        }
+        
+        .legal-warning::before {
+            content: "⚠️";
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.2rem;
+            background: var(--white);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            border: 3px solid var(--warning-red);
+        }
+        
+        .legal-warning h3 {
+            color: var(--warning-red);
+            margin: 25px 0 12px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        
+        .legal-warning p {
+            font-weight: 500;
+            color: var(--dark-text);
+            margin: 8px 0;
+        }
+        
+        .legal-warning strong {
+            color: var(--warning-red);
+        }
+        
+        .it-act-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--warning-red);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+        
+        .it-act-badge i {
+            font-size: 1.1rem;
+        }
+        
+        /* Creator Info Card - NEW FEATURE */
+        .creator-card {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 30px 0;
+            border: 2px solid #ba68c8;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .creator-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #4a148c;
+            box-shadow: var(--shadow-md);
+            flex-shrink: 0;
+        }
+        
+        .creator-info h3 {
+            color: #4a148c;
+            margin-bottom: 6px;
+            font-size: 1.3rem;
+        }
+        
+        .creator-info .role {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .creator-info .links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .creator-info .links a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            background: var(--white);
+            border-radius: 20px;
+            transition: var(--transition);
+            border: 1px solid var(--light-green);
+            font-size: 0.9rem;
+        }
+        
+        .creator-info .links a:hover {
+            background: var(--light-green);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: #555;
+            margin-top: 45px;
+            padding-top: 25px;
+            border-top: 2px solid var(--light-green);
+            font-size: 0.95rem;
+            color: var(--light-text);
+            line-height: 1.8;
         }
-
+        
+        footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        footer a:hover {
+            color: var(--accent-orange);
+        }
+        
         footer img {
-            height: 60px;
-            margin-top: 10px;
+            height: 65px;
+            margin: 15px 0 12px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
+        
+        footer img:hover {
+            transform: scale(1.08);
+        }
+        
+        .footer-credit {
+            margin-top: 15px;
+            font-weight: 500;
+            color: var(--dark-text);
+        }
+        
+        .footer-credit strong {
+            color: var(--primary-green);
+        }
+        
+        /* Scroll to Top Button */
+        #scrollTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+        
+        #scrollTop.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        #scrollTop:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .logos {
+                gap: 18px;
+            }
+            
+            .logos img {
+                height: 65px;
+            }
+            
+            .security-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .creator-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .creator-info .links {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px 16px;
+                border-radius: 18px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .subtitle {
+                font-size: 1.05rem;
+                padding: 8px 12px;
+            }
+            
+            .policy-box, .content-awareness, .legal-warning {
+                padding: 18px;
+                border-radius: 12px;
+            }
+            
+            .badge {
+                padding: 6px 14px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 15px;
+                max-width: 100%;
+            }
+            
+            .bg-elements, #scrollTop {
+                display: none;
+            }
+            
+            .security-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        a:focus, button:focus {
+            outline: 3px solid var(--accent-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-green);
+            color: white;
+            padding: 8px 16px;
+            z-index: 2000;
+            transition: top 0.3s;
+            border-radius: 0 0 8px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Fade-in animation for sections */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
+        
+        /* Pulse animation for legal warning */
+        @keyframes pulse-warning {
+            0% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.4); }
+            70% { box-shadow: 0 0 0 12px rgba(198, 40, 40, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0); }
+        }
+        
+        .legal-warning {
+            animation: pulse-warning 3s infinite;
         }
     </style>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- LOGOS -->
-    <div class="logos">
+    <a href="#main-content" class="skip-link">Skip to security policy</a>
 
-        <!-- School Logo (Clickable) -->
-        <div class="school-logo">
+    <div class="bg-elements" aria-hidden="true">
+        <i class="fas fa-shield-alt leaf" style="top: 10%; left: 8%; animation-delay: 0s;"></i>
+        <i class="fas fa-lock leaf" style="top: 25%; right: 12%; animation-delay: 3s;"></i>
+        <i class="fas fa-user-shield leaf" style="top: 45%; left: 18%; animation-delay: 1.5s;"></i>
+        <i class="fas fa-shield-alt leaf" style="top: 65%; right: 22%; animation-delay: 4.5s;"></i>
+        <i class="fas fa-lock leaf" style="top: 82%; left: 28%; animation-delay: 2s;"></i>
+        <i class="fas fa-user-shield leaf" style="top: 35%; right: 8%; animation-delay: 5.5s;"></i>
+        <i class="fas fa-shield-alt leaf" style="top: 72%; left: 38%; animation-delay: 0.8s;"></i>
+        <i class="fas fa-lock leaf" style="top: 18%; right: 32%; animation-delay: 3.8s;"></i>
+    </div>
+    
+    <div class="container">
+        <div class="header-section">
+            <div class="logos">
+                <div class="school-logo">
+                    <a href="https://ssis.ac.in/" target="_blank" title="Visit Official Website">
+                        <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png"
+                             alt="Saint Soldiers International School Logo">
+                    </a>
+                    <div class="school-link">
+                        <a href="https://ssis.ac.in/" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> https://ssis.ac.in
+                        </a>
+                    </div>
+                </div>
+
+                <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
+                <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+            </div>
+            
+            <h1><i class="fas fa-shield-alt"></i> Security & Privacy Policy</h1>
+            <div class="subtitle">
+                <i class="fas fa-lock"></i> NSS Tree QR Awareness Project
+            </div>
+
+            <div class="project-badges fade-in">
+                <span class="badge nss">
+                    <i class="fas fa-flag"></i> NSS Initiative
+                </span>
+                <span class="badge school">
+                    <i class="fas fa-school"></i> School Project
+                </span>
+                <span class="badge individual">
+                    <i class="fas fa-user"></i> Individual Participation
+                </span>
+            </div>
+        </div>
+
+        <h2 class="fade-in"><i class="fas fa-bullseye"></i> Purpose of This Page</h2>
+        <p class="fade-in">
+            This Security & Privacy Policy explains how this website operates and ensures a safe,
+            transparent, and secure experience for all users.
+        </p>
+
+        <div class="security-grid">
+            <div class="security-card fade-in">
+                <i class="fas fa-user-secret security-icon"></i>
+                <span class="security-title">Zero Data Collection</span>
+                <span class="security-desc">No personal information is ever collected, stored, or shared</span>
+            </div>
+            <div class="security-card fade-in">
+                <i class="fas fa-qrcode security-icon"></i>
+                <span class="security-title">Static QR Codes</span>
+                <span class="security-desc">Permanent links with no redirect risks or tracking parameters</span>
+            </div>
+            <div class="security-card fade-in">
+                <i class="fas fa-cloud security-icon"></i>
+                <span class="security-title">Secure Hosting</span>
+                <span class="security-desc">GitHub Pages with HTTPS encryption and DDoS protection</span>
+            </div>
+            <div class="security-card fade-in">
+                <i class="fas fa-code security-icon"></i>
+                <span class="security-title">Client-Side Only</span>
+                <span class="security-desc">No server scripts, databases, or backend processing</span>
+            </div>
+        </div>
+
+        <h2 class="fade-in"><i class="fas fa-database"></i> Data Collection</h2>
+        <div class="policy-box fade-in">
+            <ul>
+                <li>This website does <strong>NOT collect any personal data</strong> whatsoever.</li>
+                <li>No login, signup, cookies, analytics, or tracking systems are used.</li>
+                <li>No names, phone numbers, email addresses, locations, or device info are stored.</li>
+                <li>All interactions happen locally in your browser with no external transmission.</li>
+            </ul>
+        </div>
+
+        <h2 class="fade-in"><i class="fas fa-qrcode"></i> QR Code Safety</h2>
+        <p class="fade-in">
+            All QR codes used in this project are <strong>static</strong> and permanently linked
+            to GitHub Pages URLs. They:
+        </p>
+        <ul class="fade-in">
+            <li>Do not redirect to unknown, suspicious, or third-party websites</li>
+            <li>Contain only educational, non-commercial information about campus trees</li>
+            <li>Are safe for students, teachers, parents, and all visitors to scan</li>
+            <li>Cannot execute code, download files, or access your device</li>
+        </ul>
+
+        <h2 class="fade-in"><i class="fas fa-server"></i> Website Hosting & Security</h2>
+        <p class="fade-in">
+            This website is hosted on <strong>GitHub Pages</strong>, a secure and trusted platform by Microsoft.
+        </p>
+        <ul class="fade-in">
+            <li><i class="fas fa-lock"></i> HTTPS encryption is enabled for all connections</li>
+            <li><i class="fas fa-ban"></i> No server-side scripts (PHP, Python, Node.js) are used</li>
+            <li><i class="fas fa-ad"></i> No advertisements, pop-ups, or monetization scripts present</li>
+            <li><i class="fas fa-shield-virus"></i> Regular security audits and malware scanning by GitHub</li>
+            <li><i class="fas fa-globe"></i> Globally distributed CDN for fast, reliable access</li>
+        </ul>
+
+        <h2 class="fade-in"><i class="fas fa-eye"></i> Content Transparency</h2>
+        <div class="content-awareness fade-in">
+            <p style="margin-bottom: 12px; font-weight: 600;">
+                <i class="fas fa-info-circle"></i> What content is shown on this website:
+            </p>
+            <ul>
+                <li>Educational information about trees (names, scientific classification, benefits)</li>
+                <li>Environmental awareness messages aligned with NSS values</li>
+                <li>Official school and NSS branding for identification purposes</li>
+                <li>Project credits, policies, and contact information</li>
+                <li><strong>NO</strong> personal data, tracking pixels, or hidden content</li>
+            </ul>
+            <p style="margin-top: 15px; font-weight: 600; color: var(--primary-green);">
+                <i class="fas fa-check-circle"></i> All content is publicly viewable, non-sensitive, and education-focused.
+            </p>
+        </div>
+
+        <h2 class="fade-in"><i class="fas fa-copyright"></i> Content Usage</h2>
+        <div class="policy-box fade-in">
+            <ul>
+                <li>All content is for <strong>educational and awareness purposes only</strong>.</li>
+                <li>The information provided is strictly non-commercial and non-profit.</li>
+                <li>Images and logos are used with permission for educational representation only.</li>
+                <li>Reproduction for classroom teaching is permitted with proper attribution.</li>
+            </ul>
+        </div>
+
+        <h2 class="fade-in"><i class="fas fa-user-check"></i> Responsible Use</h2>
+        <p class="fade-in">
+            Users are encouraged to use this website responsibly and respectfully.
+            Any misuse, tampering, or misrepresentation of content is discouraged.
+        </p>
+        <ul class="fade-in">
+            <li>Do not attempt to modify, scrape, or automate access to this website</li>
+            <li>Do not use content for commercial purposes without explicit permission</li>
+            <li>Report any security concerns to the project maintainers immediately</li>
+            <li>Respect the educational intent and community-focused nature of this project</li>
+        </ul>
+
+        <div class="legal-warning fade-in">
+            <h3><i class="fas fa-gavel"></i> Legal Notice: Copyright & IT Act Compliance</h3>
+            <p>All content, design, code, and educational materials on this website are protected under Indian copyright law.</p>
+            <p>Unauthorized copying, redistribution, commercial use, or misrepresentation of this project's content is strictly prohibited.</p>
+            <p><strong>Violation may result in legal action under the Information Technology Act, 2000 (Government of India).</strong></p>
+            <div class="it-act-badge">
+                <i class="fas fa-scale-balanced"></i> IT Act 2000 • Section 66: Computer Related Offences
+            </div>
+        </div>
+
+        <h2 class="fade-in"><i class="fas fa-users"></i> Project Ownership</h2>
+        <p class="fade-in">
+            This project is a collaborative effort created and maintained by:
+        </p>
+
+        <div class="creator-card fade-in">
+            <div class="creator-avatar">
+                <i class="fas fa-user-tie"></i>
+            </div>
+            <div class="creator-info">
+                <h3>PARAS DHIMAN</h3>
+                <span class="role"><i class="fas fa-briefcase"></i> Professional Builder & Founder, SoftwareLabs</span>
+                <span class="role"><i class="fas fa-leaf"></i> NSS Volunteer, Saint Soldiers International School</span>
+                <div class="links">
+                    <a href="https://softwarelabschd.github.io/softwarelabs" target="_blank" rel="noopener">
+                        <i class="fas fa-globe"></i> SoftwareLabs Portfolio
+                    </a>
+                    <a href="https://ssis.ac.in/" target="_blank" rel="noopener">
+                        <i class="fas fa-school"></i> School Website
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="fade-in">
+            <li><strong>Paras Dhiman</strong>, NSS Volunteer & Project Lead</li>
+            <li><strong>Saint Soldiers International School</strong>, Sector 28-B, Chandigarh</li>
+            <li>Guided by NSS Program Officer: <strong>Saurabh Sir</strong></li>
+            <li>Supported by NSS Unit & School Administration</li>
+        </ul>
+
+        <h2 class="fade-in"><i class="fas fa-envelope"></i> Contact & Official Resources</h2>
+        <p class="fade-in">
+            For official school information, please visit:
+            <a href="https://ssis.ac.in/" target="_blank"><strong><i class="fas fa-external-link-alt"></i> ©️ SSIS Official Website</strong></a>
+        </p>
+        <p class="fade-in">
+            For NSS-related queries: 
+            <a href="https://nss.gov.in/" target="_blank"><strong><i class="fas fa-flag"></i> NSS Government Portal</strong></a>
+        </p>
+
+
+        <footer>
+            🔒 Security & Privacy Policy <br>
+            NSS Tree QR Awareness Project <br>
+            Saint Soldiers International School, Chandigarh <br><br>
+            MADE BY NSS VOLUNTEERS | BY – <strong>PARAS DHIMAN</strong>
+            <br>
+            <span style="display: block; margin: 8px 0; color: var(--primary-green); font-weight: 500;">
+                <i class="fas fa-code"></i> Professional Builder & Founder: 
+                <a href="https://softwarelabschd.github.io/softwarelabs" target="_blank" style="color: var(--primary-green);">
+                    SoftwareLabs
+                </a>
+            </span>
             <a href="https://ssis.ac.in/" target="_blank" title="Visit Official Website">
                 <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png"
                      alt="Saint Soldiers International School Logo">
             </a>
-            <div class="school-link">
-                <a href="https://ssis.ac.in/" target="_blank">https://ssis.ac.in</a>
+            <div class="footer-credit">
+                <i class="fas fa-shield-alt"></i> Privacy-First Design • 
+                <i class="fas fa-gavel"></i> IT Act 2000 Compliant • 
+                <i class="fas fa-graduation-cap"></i> Educational Use Only
             </div>
-        </div>
-
-        <!-- NSS Logo -->
-        <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
-
-        <!-- My Bharat Logo -->
-        <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+        </footer>
     </div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <h1>Security & Privacy Policy</h1>
-    <div class="subtitle">NSS Tree QR Awareness Project</div>
+    <script>
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-    <h2>Purpose of This Page</h2>
-    <p>
-        This Security & Privacy Policy explains how this website operates and ensures a safe,
-        transparent, and secure experience for all users.
-    </p>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(15px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
 
-    <h2>Data Collection</h2>
-    <div class="policy-box">
-        <ul>
-            <li>This website does <strong>NOT collect any personal data</strong>.</li>
-            <li>No login, signup, cookies, or tracking systems are used.</li>
-            <li>No names, phone numbers, email addresses, or locations are stored.</li>
-        </ul>
-    </div>
+            const securityCards = document.querySelectorAll('.security-card');
+            securityCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+        });
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+        
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
 
-    <h2>QR Code Safety</h2>
-    <p>
-        All QR codes used in this project are <strong>static</strong> and permanently linked
-        to GitHub Pages URLs. They:
-    </p>
-    <ul>
-        <li>Do not redirect to unknown or third-party websites</li>
-        <li>Contain only educational information</li>
-        <li>Are safe for students, teachers, and visitors</li>
-    </ul>
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.leaf').forEach(leaf => {
+                leaf.style.animation = 'none';
+            });
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.animation = 'none';
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+            document.querySelector('.legal-warning').style.animation = 'none';
+        }
 
-    <h2>Website Hosting & Security</h2>
-    <p>
-        This website is hosted on <strong>GitHub Pages</strong>, a secure and trusted platform.
-    </p>
-    <ul>
-        <li>HTTPS encryption is enabled</li>
-        <li>No server-side scripts are used</li>
-        <li>No malware, ads, or pop-ups are present</li>
-    </ul>
-
-    <h2>Content Usage</h2>
-    <div class="policy-box">
-        <ul>
-            <li>All content is for <strong>educational and awareness purposes only</strong>.</li>
-            <li>The information provided is non-commercial.</li>
-            <li>Images and logos are used strictly for educational representation.</li>
-        </ul>
-    </div>
-
-    <h2>Responsible Use</h2>
-    <p>
-        Users are encouraged to use this website responsibly and respectfully.
-        Any misuse, tampering, or misrepresentation of content is discouraged.
-    </p>
-
-    <h2>Project Ownership</h2>
-    <p>
-        This project is created and maintained by:
-    </p>
-    <ul>
-        <li><strong>Paras Dhiman</strong>, NSS Volunteer</li>
-        <li><strong>Saint Soldiers International School, Sector 28-B, Chandigarh</strong></li>
-        <li>Guided by NSS Program Officer: <strong>Saurabh Sir</strong></li>
-    </ul>
-
-    <h2>Contact & School Website</h2>
-    <p>
-        For official school information, please visit:
-        <a href="https://ssis.ac.in/" target="_blank"><strong>©️SSIS</strong></a>
-    </p>
-
-    <footer>
-        🔒 Security & Privacy Policy <br>
-        NSS Tree QR Awareness Project <br>
-        Saint Soldiers International School, Chandigarh <br><br>
-        MADE BY NSS VOLUNTEERS | BY – PARAS DHIMAN
-        <br>
-        <a href="https://ssis.ac.in/" target="_blank" title="Visit Official Website">
-            <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png"
-                 alt="Saint Soldiers International School Logo">
-        </a>
-    </footer>
-
-</div>
+        console.log('%c🔒 Security Policy Loaded', 'color: #2e7d32; font-weight: bold; font-size: 14px;');
+        console.log('%cProject: NSS Tree QR Awareness Initiative', 'color: #388e3c;');
+        console.log('%cBuilder: PARAS DHIMAN | SoftwareLabs', 'color: #4a148c; font-weight: 600;');
+        console.log('%cCompliance: IT Act 2000, Government of India', 'color: #c62828; font-weight: 600;');
+    </script>
 </body>
 </html>
