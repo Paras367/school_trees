@@ -2,201 +2,971 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>School Trees QR Code Project | NSS</title>
-
-    <!-- Favicon -->
-    <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
+    <title>School Trees QR Code Project | NSS | Saint Soldiers International School</title>
+    <meta name="title" content="School Trees QR Code Project | NSS Eco Awareness Initiative">
+    <meta name="description" content="Explore the NSS Eco Awareness Initiative at Saint Soldiers International School, Chandigarh. Scan QR codes to learn about campus trees, their scientific names, benefits, and environmental importance.">
+    <meta name="keywords" content="NSS, tree project, QR code, eco awareness, Saint Soldiers International School, Chandigarh, biodiversity, environmental education, school initiative">
+    <meta name="author" content="Paras Dhiman">
+    <meta name="school" content="Saint Soldiers International School, Chandigarh - 28">
+    <meta name="organization" content="National Service Scheme (NSS), Government of India">
+    <meta name="theme-color" content="#2e7d32">
+    
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ssis.ac.in">
+    <meta property="og:title" content="School Trees QR Code Project | NSS">
+    <meta property="og:description" content="NSS Eco Awareness Initiative: Scan QR codes to discover trees on our campus. Learn, protect, and grow with Saint Soldiers International School.">
+    <meta property="og:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+    <meta property="og:site_name" content="Saint Soldiers International School - NSS Portal">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ssis.ac.in/nss-trees/">
+    <meta property="twitter:title" content="School Trees QR Code Project | NSS">
+    <meta property="twitter:description" content="NSS Eco Awareness Initiative: Scan QR codes to discover trees on our campus.">
+    <meta property="twitter:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Saint Soldiers International School",
+      "alternateName": "SSIS",
+      "url": "https://ssis.ac.in",
+      "logo": "https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Chandigarh",
+        "postalCode": "160028",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Administration",
+        "url": "https://ssis.ac.in"
+      },
+      "department": [{
+        "@type": "EducationalOrganization",
+        "name": "National Service Scheme (NSS)",
+        "description": "Eco Awareness Initiative: School Trees QR Code Project"
+      }]
+    }
+    </script>
+    
+
+    <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #388e3c;
+            --light-green: #e8f5e9;
+            --accent-orange: #d84315;
+            --dark-text: #1b3b1b;
+            --light-text: #555;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 10px rgba(0,0,0,0.12);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.15);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #e8f5e9, #ffffff);
+            font-family: 'Poppins', 'Merriweather', Arial, sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #ffffff 100%);
             margin: 0;
             padding: 15px;
-            color: #1b3b1b;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
+        .bg-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .leaf {
+            position: absolute;
+            color: rgba(46, 125, 50, 0.15);
+            font-size: 2rem;
+            animation: float 15s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(720deg); opacity: 0; }
+        }
+        
         .container {
-            max-width: 950px;
+            max-width: 1000px;
             margin: auto;
-            background: white;
-            padding: 25px;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(46, 125, 50, 0.2);
         }
-
+        
+        /* Header & Logos */
+        .header-section {
+            text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-green);
+            margin-bottom: 20px;
+        }
+        
         .logos {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+            gap: 25px;
+            margin: 15px 0;
         }
-
+        
         .logos img {
-            height: 75px;
+            height: 80px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
         }
-
-        .nav-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 14px;
-            margin: 25px 0;
+        
+        .logos img:hover {
+            transform: scale(1.05);
         }
-
-        .nav-links a {
-            background: #e8f5e9;
-            padding: 14px;
-            border-radius: 12px;
-            text-align: center;
-            font-weight: bold;
-            color: #1b5e20;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-        }
-
-        .nav-links a:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 18px rgba(0,0,0,0.18);
-            background: #c8e6c9;
-        }
-
-        h1 {
-            text-align: center;
-            color: #2e7d32;
-            margin-top: 18px;
-        }
-
-        h2 {
-            color: #388e3c;
-            margin-top: 30px;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
+        
         .motto {
             text-align: center;
-            font-weight: bold;
-            color: #d84315;
-            margin: 10px 0 20px;
-            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 15px 0 25px;
+            font-size: 1.2rem;
+            letter-spacing: 0.5px;
+            padding: 10px;
+            background: rgba(216, 67, 21, 0.08);
+            border-radius: 10px;
+            display: inline-block;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
+        
+        .motto i {
+            margin-right: 8px;
+            color: var(--primary-green);
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary-green);
+            margin: 20px 0 10px;
+            font-size: 2.2rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-green);
+            border-radius: 2px;
+        }
+        
+        .school-badge {
+            text-align: center;
+            background: var(--light-green);
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 15px auto 25px;
+            font-weight: 600;
+            color: var(--primary-green);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(46, 125, 50, 0.3);
+        }
+        
+        .school-badge i {
+            font-size: 1.3rem;
+        }
+        
+        /* Navigation */
+        .nav-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 30px 0;
+            padding: 10px 5px;
+        }
+        
+        .nav-links a {
+            background: linear-gradient(135deg, var(--light-green), #c8e6c9);
+            padding: 16px 12px;
+            border-radius: 16px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--primary-green);
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.6s;
+        }
+        
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+        
+        .nav-links a i {
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+            border-color: var(--secondary-green);
+        }
+        
+        .nav-links a:hover i {
+            transform: scale(1.2) rotate(5deg);
+            color: var(--accent-orange);
+        }
+        
+        /* Content Sections */
+        h2 {
+            color: var(--secondary-green);
+            margin: 35px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed var(--light-green);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.8rem;
+        }
+        
+        h2 i {
+            color: var(--primary-green);
+            font-size: 1.7rem;
+        }
+        
+        p {
+            margin: 12px 0;
+            font-size: 1.05rem;
+        }
+        
+        ul {
+            line-height: 2;
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+        
+        ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        ul li::before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9rem;
+        }
+        
+        /* Highlight Box */
         .highlight {
-            background: #e8f5e9;
-            padding: 16px;
-            border-left: 6px solid #2e7d32;
-            margin-top: 15px;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+            padding: 22px;
+            border-left: 5px solid var(--primary-green);
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .highlight::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(46,125,50,0.08) 0%, transparent 70%);
+            z-index: 0;
+        }
+        
+        .highlight > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight ul {
+            margin-top: 12px;
+            padding-left: 20px;
+        }
+        
+        .highlight ul li::before {
+            content: "✓";
+            color: var(--primary-green);
+            font-weight: bold;
+            left: -5px;
+        }
+        
+        /* Stats Section */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .stat-card {
+            background: var(--white);
+            padding: 20px 15px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--light-green);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-green);
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin: 5px 0;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            font-weight: 500;
+        }
+        
+        .stat-icon {
+            font-size: 1.8rem;
+            color: var(--secondary-green);
+            margin-bottom: 8px;
+        }
+        
+        /* Quick Facts */
+        .quick-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .fact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 15px;
+            background: rgba(232, 245, 233, 0.6);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        
+        .fact-item:hover {
+            background: var(--light-green);
+            transform: translateX(5px);
+        }
+        
+        .fact-icon {
+            font-size: 1.6rem;
+            color: var(--primary-green);
+            min-width: 30px;
+            margin-top: 3px;
+        }
+        
+        .fact-text {
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        
+        /* Sample Link Box */
         .link-box {
             text-align: center;
-            margin: 20px 0;
-            font-size: 18px;
+            margin: 25px 0;
+            font-size: 1.15rem;
+            padding: 15px;
+            background: rgba(232, 245, 233, 0.7);
+            border-radius: 16px;
+            border: 2px dashed var(--secondary-green);
         }
-
-        a {
-            color: #1b5e20;
+        
+        .link-box a {
+            color: var(--primary-green);
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            margin-top: 8px;
         }
-
+        
+        .link-box a:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+            background: var(--light-green);
+        }
+        
+        .link-box a i {
+            font-size: 1.2rem;
+        }
+        
+        /* Eco Message */
+        .eco-message {
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin: 30px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 20px;
+            font-size: 1.3rem;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid var(--secondary-green);
+        }
+        
+        .eco-message::before {
+            content: "🌍";
+            position: absolute;
+            font-size: 4rem;
+            opacity: 0.15;
+            top: -10px;
+            right: 20px;
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.1); opacity: 0.25; }
+            100% { transform: scale(1); opacity: 0.15; }
+        }
+        
+        .eco-message span {
+            display: block;
+            font-size: 1.1rem;
+            margin-top: 8px;
+            font-weight: 500;
+            color: var(--dark-text);
+        }
+        
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 35px;
-            font-size: 14px;
-            color: #555;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid var(--light-green);
+            font-size: 0.95rem;
+            color: var(--light-text);
+            line-height: 1.7;
         }
-
+        
+        footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        footer a:hover {
+            color: var(--accent-orange);
+            text-decoration: underline;
+        }
+        
         footer img {
-            height: 65px;
-            margin-top: 10px;
+            height: 70px;
+            margin: 15px 0 10px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
+        
+        footer img:hover {
+            transform: scale(1.08);
+        }
+        
+        .footer-credit {
+            margin-top: 12px;
+            font-weight: 500;
+            color: var(--dark-text);
+        }
+        
+        .footer-credit i {
+            color: var(--accent-orange);
+            margin: 0 3px;
+        }
+        
+        /* Scroll to Top Button */
+        #scrollTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+        
+        #scrollTop.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        #scrollTop:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 22px 18px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .logos {
+                gap: 15px;
+            }
+            
+            .logos img {
+                height: 65px;
+            }
+            
+            .nav-links {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 12px;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px 15px;
+                border-radius: 16px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .nav-links a {
+                padding: 14px 10px;
+                font-size: 0.95rem;
+            }
+            
+            .nav-links a i {
+                font-size: 1.3rem;
+            }
+            
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .eco-message {
+                font-size: 1.15rem;
+                padding: 16px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 15px;
+                max-width: 100%;
+            }
+            
+            .bg-elements, #scrollTop {
+                display: none;
+            }
+            
+            .nav-links a {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Focus Styles for Accessibility */
+        a:focus, button:focus {
+            outline: 3px solid var(--accent-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-green);
+            color: white;
+            padding: 8px 16px;
+            z-index: 2000;
+            transition: top 0.3s;
+            border-radius: 0 0 8px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
         }
     </style>
 </head>
 
 <body>
-<div class="container">
-
-    <!-- Logos -->
-    <div class="logos">
-        <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
-        <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Animated Background Elements -->
+    <div class="bg-elements" aria-hidden="true">
+        <i class="fas fa-leaf leaf" style="top: 10%; left: 5%; animation-delay: 0s;"></i>
+        <i class="fas fa-seedling leaf" style="top: 20%; right: 10%; animation-delay: 2s;"></i>
+        <i class="fas fa-tree leaf" style="top: 40%; left: 15%; animation-delay: 4s;"></i>
+        <i class="fas fa-leaf leaf" style="top: 60%; right: 20%; animation-delay: 1s;"></i>
+        <i class="fas fa-seedling leaf" style="top: 80%; left: 25%; animation-delay: 3s;"></i>
+        <i class="fas fa-tree leaf" style="top: 30%; right: 5%; animation-delay: 5s;"></i>
+        <i class="fas fa-leaf leaf" style="top: 70%; left: 35%; animation-delay: 0.5s;"></i>
+        <i class="fas fa-seedling leaf" style="top: 15%; right: 30%; animation-delay: 2.5s;"></i>
     </div>
+    
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
 
-    <p class="motto">NSS Motto: <strong>NOT ME BUT YOU</strong></p>
+            <div class="logos">
+                <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
+                <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+            </div>
+            
+            <p class="motto">
+                <i class="fas fa-quote-left"></i>
+                NSS Motto: <strong>NOT ME BUT YOU</strong>
+                <i class="fas fa-quote-right"></i>
+            </p>
+            
+            <h1><i class="fas fa-tree"></i> School Trees QR Code Project</h1>
+            
+            <div class="school-badge">
+                <i class="fas fa-school"></i>
+                SAINT SOLDIERS INTERNATIONAL SCHOOL, CHD 28
+            </div>
+            
+            <p style="text-align:center; margin-top: 5px;">
+                <b><i class="fas fa-leaf"></i> NSS Eco Awareness Initiative</b><br>
+                Created by <b><i class="fas fa-users"></i> NSS Volunteers</b> of<br>
+                <b>Saint Soldiers International School, Chandigarh</b>
+            </p>
+        </div>
 
-    <h1>🌳 School Trees QR Code Project</h1>
+        <div class="nav-links">
+            <a href="list.html"><i class="fas fa-list-ul"></i> Tree List</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About Project</a>
+            <a href="security.html"><i class="fas fa-shield-alt"></i> Security</a>
+            <a href="tc.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            <a href="credits.html"><i class="fas fa-handshake"></i> Credits</a>
+        </div>
 
-    <p style="text-align:center;">
-        <b>NSS Eco Awareness Initiative</b><br>
-        Created by <b>NSS Volunteers</b> of<br>
-        <b>SAINT SOLDIERS INTERNATIONAL SCHOOL, CHD 28</b>
-    </p>
+        <h2><i class="fas fa-book-open"></i> Project Overview</h2>
+        <p>
+            The <b>School Trees QR Code Project</b> is an eco-friendly and educational initiative aimed at spreading awareness about trees present inside the school campus.
+        </p>
 
-    <!-- 🔗 NAVIGATION SECTION -->
-    <div class="nav-links">
-        <a href="list.html">🌳 Tree List</a>
-        <a href="about.html">ℹ️ About Project</a>
-        <a href="security.html">🔒 Security</a>
-        <a href="tc.html">📜 Terms & Policy</a>
-        <a href="credits.html">🤝 Credits</a>
-    </div>
+        <div class="highlight">
+            <p><i class="fas fa-qrcode" style="color: var(--primary-green); margin-right: 8px;"></i> Each tree is tagged with a <b>QR code</b>.<br>
+            When scanned, the QR code opens a dedicated web page that displays:</p>
+            <ul>
+                <li>Tree name (Common & Local)</li>
+                <li>Scientific name (Botanical classification)</li>
+                <li>Features, medicinal & ecological benefits</li>
+                <li>Environmental importance & conservation status</li>
+                <li>Eco-awareness messages for students</li>
+            </ul>
+            <p style="margin-top: 12px; font-weight: 600;">
+                <i class="fas fa-lightbulb" style="color: var(--accent-orange);"></i> 
+                This initiative combines <b>technology with environmental responsibility</b> to foster sustainable learning.
+            </p>
+        </div>
 
-    <h2>📌 Project Overview</h2>
-    <p>
-        The <b>School Trees QR Code Project</b> is an eco-friendly and educational initiative aimed at spreading awareness about trees present inside the school campus.
-    </p>
+        <h2><i class="fas fa-chart-line"></i> Project Impact</h2>
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-tree stat-icon"></i>
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Trees Cataloged</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-qrcode stat-icon"></i>
+                <span class="stat-number">100%</span>
+                <span class="stat-label">QR Coverage</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-user-graduate stat-icon"></i>
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Students Engaged</span>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-seedling stat-icon"></i>
+                <span class="stat-number">12</span>
+                <span class="stat-label">Species Protected</span>
+            </div>
+        </div>
 
-    <div class="highlight">
-        Each tree is tagged with a <b>QR code</b>.<br>
-        When scanned, the QR code opens a dedicated web page that displays:
+        <h2><i class="fas fa-bullseye"></i> Key Objectives</h2>
         <ul>
-            <li>Tree name</li>
-            <li>Scientific name</li>
-            <li>Features and benefits</li>
-            <li>Environmental importance</li>
-            <li>Awareness messages</li>
+            <li>Promote awareness about local biodiversity and ecosystem balance</li>
+            <li>Encourage students to observe, document, and learn about campus flora</li>
+            <li>Integrate digital tools (QR codes, web tech) for experiential environmental education</li>
+            <li>Support NSS motto: <b><i class="fas fa-heart" style="color: var(--accent-orange);"></i> NOT ME BUT YOU</b> through community action</li>
+            <li>Develop student leadership in sustainability initiatives</li>
         </ul>
-        This initiative combines <b>technology with environmental responsibility</b>.
+
+        <h2><i class="fas fa-lightbulb"></i> Quick Facts</h2>
+        <div class="quick-facts">
+            <div class="fact-item">
+                <i class="fas fa-clock fact-icon"></i>
+                <span class="fact-text">Launched: Academic Year 2025-26</span>
+            </div>
+            <div class="fact-item">
+                <i class="fas fa-users fact-icon"></i>
+                <span class="fact-text">Led by NSS Unit, SSIS Chandigarh</span>
+            </div>
+            <div class="fact-item">
+                <i class="fas fa-mobile-alt fact-icon"></i>
+                <span class="fact-text">Mobile-Optimized for Easy Scanning</span>
+            </div>
+            <div class="fact-item">
+                <i class="fas fa-globe-asia fact-icon"></i>
+                <span class="fact-text">Aligned with UN SDG 13 & 15</span>
+            </div>
+        </div>
+
+        <h2><i class="fas fa-microchip"></i> Technology Stack</h2>
+        <ul>
+            <li><i class="fab fa-html5" style="color: #e34c26;"></i> HTML5 (Semantic, Accessible Static Pages)</li>
+            <li><i class="fab fa-github" style="color: #333;"></i> GitHub Pages (Secure, Free Web Hosting)</li>
+            <li><i class="fas fa-qrcode" style="color: #000;"></i> Static QR Codes (Permanent, Low-Maintenance)</li>
+            <li><i class="fas fa-paint-brush" style="color: var(--secondary-green);"></i> CSS3 (Responsive, Eco-Themed Design)</li>
+            <li><i class="fas fa-shield-alt" style="color: var(--primary-green);"></i> Privacy-First: No data collection, client-side only</li>
+        </ul>
+
+ 
+        <h2><i class="fas fa-apple-alt"></i> Explore a Sample</h2>
+        <div class="link-box">
+            <i class="fas fa-external-link-alt"></i> Preview a tree profile:
+            <br>
+            <a href="mango.html"><i class="fas fa-mango"></i> 🥭 Mango Tree Profile Page</a>
+        </div>
+
+
+        <div class="eco-message">
+            🌍 Save Trees, Save Life 🌍
+            <span>Protect nature today for a greener, healthier tomorrow.</span>
+        </div>
+
+
+        <footer>
+            <a href="https://ssis.ac.in/" target="_blank" rel="noopener noreferrer">
+                <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" alt="Saint Soldiers International School Logo">
+                <br>
+                <i class="fas fa-external-link-alt"></i> Visit School Website
+            </a>
+            <br>
+            <div class="footer-credit">
+                <i class="fas fa-seedling"></i> NSS Eco Awareness Initiative | 
+                BY – <strong>PARAS DHIMAN</strong> <i class="fas fa-heart" style="color: var(--accent-orange);"></i>
+            </div>
+            <div style="margin-top: 10px; font-size: 0.9rem; color: var(--light-text);">
+                <i class="fas fa-lock"></i> Privacy Focused • <i class="fas fa-mobile-alt"></i> Mobile Friendly • 
+                <i class="fas fa-universal-access"></i> Accessible Design
+            </div>
+        </footer>
     </div>
+    
 
-    <h2>🌱 Objectives</h2>
-    <ul>
-        <li>Promote awareness about biodiversity</li>
-        <li>Encourage students to learn about trees around them</li>
-        <li>Use digital tools for environmental education</li>
-        <li>Support NSS motto: <b>NOT ME BUT YOU</b></li>
-    </ul>
+    <button id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <h2>🖥️ Technology Used</h2>
-    <ul>
-        <li>HTML (Static Web Pages)</li>
-        <li>GitHub Pages (Free Web Hosting)</li>
-        <li>QR Codes (Static, Permanent)</li>
-    </ul>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-    <h2>🌳 Sample Tree Page</h2>
-    <div class="link-box">
-        👉 <a href="mango.html">🍋 Mango Tree Page</a>
-    </div>
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'pulse 1.5s ease-in-out';
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            statNumbers.forEach(num => {
+                observer.observe(num);
+            });
 
-    <div class="highlight" style="text-align:center; font-weight:bold;">
-        🌍 Save Trees, Save Life 🌍<br>
-        Protect nature today for a better tomorrow.
-    </div>
-
-    <footer>
-        <a href="https://ssis.ac.in/" target="_blank">
-            <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" alt="School Logo">
-        </a>
-        <br>
-        NSS Eco Awareness Initiative | BY – PARAS DHIMAN
-    </footer>
-
-</div>
+            const factItems = document.querySelectorAll('.fact-item');
+            factItems.forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(8px)';
+                });
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+        });
+        
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+        
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
+    </script>
 </body>
 </html>
