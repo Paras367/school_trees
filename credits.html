@@ -2,178 +2,1077 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Credits | NSS Tree Information Project</title>
-     <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" type="image/x-icon"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Credits | NSS Tree Information Project | Saint Soldiers International School</title>
+    <meta name="title" content="Project Credits | NSS Tree QR Awareness Initiative">
+    <meta name="description" content="Acknowledgements for the NSS Tree QR Awareness Project. Credits to Saint Soldiers International School, NSS, Paras Dhiman, and SoftwareLabs for this eco-educational initiative.">
+    <meta name="keywords" content="NSS, credits, acknowledgements, Saint Soldiers International School, Chandigarh, Paras Dhiman, SoftwareLabs, tree project, QR code, eco awareness">
+    <meta name="author" content="Paras Dhiman">
+    <meta name="school" content="Saint Soldiers International School, Chandigarh - 28">
+    <meta name="organization" content="National Service Scheme (NSS), Government of India">
+    <meta name="theme-color" content="#2e7d32">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ssis.ac.in">
+    <meta property="og:title" content="Project Credits | NSS Tree QR Awareness Initiative">
+    <meta property="og:description" content="Meet the team behind our campus tree QR initiative: School, NSS, volunteers, and professional contributors.">
+    <meta property="og:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+    <meta property="og:site_name" content="Saint Soldiers International School - NSS Portal">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ssis.ac.in">
+    <meta property="twitter:title" content="Project Credits | NSS Tree QR Awareness Initiative">
+    <meta property="twitter:description" content="Meet the team behind our campus tree QR initiative.">
+    <meta property="twitter:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Project Credits & Acknowledgements",
+      "description": "Credits for NSS Tree QR Awareness Project at Saint Soldiers International School",
+      "publisher": {
+        "@type": "EducationalOrganization",
+        "name": "Saint Soldiers International School",
+        "url": "https://ssis.ac.in",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png"
+        }
+      },
+      "contributor": [
+        {
+          "@type": "Person",
+          "name": "Paras Dhiman",
+          "jobTitle": "NSS Volunteer & Project Lead",
+          "url": "https://softwarelabschd.github.io/softwarelabs"
+        },
+        {
+          "@type": "Organization",
+          "name": "National Service Scheme (NSS)",
+          "url": "https://nss.gov.in"
+        },
+        {
+          "@type": "Organization",
+          "name": "SoftwareLabs",
+          "url": "https://softwarelabschd.github.io/softwarelabs"
+        }
+      ],
+      "keywords": "NSS, tree project, QR codes, environmental education, Chandigarh"
+    }
+    </script>
+    
+    <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #388e3c;
+            --light-green: #e8f5e9;
+            --accent-orange: #d84315;
+            --dark-text: #2c3e2d;
+            --light-text: #555;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 10px rgba(0,0,0,0.12);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.15);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
             margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f4f8f5;
-            color: #2c3e2d;
+            padding: 0;
+            box-sizing: border-box;
         }
-
+        
+        body {
+            font-family: 'Poppins', 'Merriweather', Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f8f5 0%, #e8f5e9 50%, #ffffff 100%);
+            margin: 0;
+            padding: 0;
+            color: var(--dark-text);
+            line-height: 1.7;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background Elements */
+        .bg-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .leaf {
+            position: absolute;
+            color: rgba(46, 125, 50, 0.12);
+            font-size: 1.8rem;
+            animation: float 20s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-100px) rotate(720deg) scale(1.2); opacity: 0; }
+        }
+        
+        /* Header Styles */
         header {
-            background: linear-gradient(90deg, #2e7d32, #66bb6a);
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
             color: white;
-            padding: 20px 12px;
+            padding: 25px 15px 30px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
         }
-
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: pulse 8s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 0.5; }
+        }
+        
         .logos {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 25px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
         }
-
+        
         .logos img {
-            height: 55px;
+            height: 60px;
             background: white;
-            padding: 6px;
-            border-radius: 8px;
+            padding: 8px;
+            border-radius: 12px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
         }
-
+        
+        .logos img:hover {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
         header h1 {
-            margin: 8px 0 4px;
-            font-size: 26px;
+            margin: 12px 0 6px;
+            font-size: 2rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
-
+        
         header p {
             margin: 0;
-            font-size: 15px;
+            font-size: 1.05rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
         }
-
+        
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-top: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Container */
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: auto;
-            padding: 25px;
+            padding: 25px 20px;
         }
-
+        
+        /* Card Styles */
         .card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 22px;
-            margin-bottom: 20px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+            background: var(--white);
+            border-radius: 20px;
+            padding: 26px;
+            margin-bottom: 22px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--light-green);
+            position: relative;
+            overflow: hidden;
         }
-
+        
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--secondary-green);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--secondary-green);
+        }
+        
+        .card:hover::before {
+            width: 100%;
+            opacity: 0.08;
+        }
+        
         .card h2 {
             margin-top: 0;
-            color: #1b5e20;
+            margin-bottom: 16px;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            padding-bottom: 12px;
+            border-bottom: 2px dashed var(--light-green);
         }
-
+        
+        .card h2 i {
+            font-size: 1.4rem;
+            color: var(--secondary-green);
+        }
+        
+        .highlight {
+            font-weight: 700;
+            color: var(--primary-green);
+            font-size: 1.1rem;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 4px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 4px 0;
+        }
+        
         ul {
-            padding-left: 20px;
+            padding-left: 24px;
+            margin: 10px 0;
         }
-
+        
         li {
-            margin: 6px 0;
+            margin: 8px 0;
+            position: relative;
+            padding-left: 26px;
+            font-size: 1.02rem;
         }
-
+        
+        li::before {
+            content: "🌿";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            font-size: 0.9rem;
+        }
+        
+        /* Featured Contributor Card - NEW FEATURE */
+        .featured-contributor {
+            background: linear-gradient(135deg, #f3e5f5, #e1bee7);
+            border: 2px solid #ba68c8;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-contributor::before {
+            content: "⭐";
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.15;
+            transform: rotate(15deg);
+            z-index: 0;
+        }
+        
+        .featured-contributor > * {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contributor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .contributor-card {
+            background: var(--white);
+            padding: 22px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #e1bee7;
+        }
+        
+        .contributor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: #ba68c8;
+        }
+        
+        .contributor-avatar {
+            width: 85px;
+            height: 85px;
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 2rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .contributor-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            margin-bottom: 5px;
+        }
+        
+        .contributor-role {
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 0.95rem;
+        }
+        
+        .contributor-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .contributor-links a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 7px 14px;
+            background: var(--light-green);
+            border-radius: 25px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        .contributor-links a:hover {
+            background: var(--secondary-green);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* SoftwareLabs Badge */
+        .softwarelabs-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 12px 0;
+            font-size: 1rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        
+        .softwarelabs-badge:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .softwarelabs-badge i {
+            font-size: 1.2rem;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: var(--light-green);
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+        
+        .stat-item:hover {
+            background: var(--secondary-green);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .stat-icon {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 8px;
+            display: block;
+        }
+        
+        .stat-item:hover .stat-icon {
+            color: white;
+        }
+        
+        .stat-value {
+            font-weight: 700;
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        /* Purpose Cards Grid */
+        .purpose-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .purpose-card {
+            background: var(--light-green);
+            padding: 18px;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--secondary-green);
+        }
+        
+        .purpose-card:hover {
+            background: var(--secondary-green);
+            color: white;
+            transform: translateY(-4px);
+        }
+        
+        .purpose-icon {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .purpose-card:hover .purpose-icon {
+            color: white;
+        }
+        
+        .purpose-title {
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: block;
+        }
+        
+        /* Footer */
         footer {
             text-align: center;
-            padding: 16px;
-            font-size: 15px;
-            color: #444;
-            background: #e8f5e9;
+            padding: 25px 20px;
+            font-size: 1rem;
+            color: var(--dark-text);
+            background: linear-gradient(135deg, var(--light-green), #c8e6c9);
+            margin-top: 30px;
+            border-top: 2px solid var(--secondary-green);
         }
-
-        .highlight {
-            font-weight: bold;
-            color: #1b5e20;
-            font-size: 16px;
-        }
-
+        
         .by {
-            margin-top: 8px;
-            font-size: 17px;
-            font-weight: bold;
-            color: #2e7d32;
+            margin-top: 12px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: var(--white);
+            border-radius: 50px;
+            box-shadow: var(--shadow-sm);
         }
+        
+        .by i {
+            color: var(--accent-orange);
+        }
+        
+        footer a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        footer a:hover {
+            color: var(--accent-orange);
+            text-decoration: underline;
+        }
+        
+        /* Scroll to Top Button */
+        #scrollTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+        
+        #scrollTop.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        #scrollTop:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 15px 25px;
+            }
+            
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logos {
+                gap: 18px;
+            }
+            
+            .logos img {
+                height: 52px;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .card {
+                padding: 22px 18px;
+            }
+            
+            .contributor-grid, .purpose-grid, .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+            }
+            
+            .logos img {
+                height: 48px;
+            }
+            
+            .card h2 {
+                font-size: 1.35rem;
+            }
+            
+            .contributor-avatar {
+                width: 70px;
+                height: 70px;
+                font-size: 1.6rem;
+            }
+            
+            .by {
+                font-size: 1.05rem;
+                padding: 6px 16px;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            header {
+                background: white;
+                color: var(--dark-text);
+                box-shadow: none;
+            }
+            
+            .card, .contributor-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+            
+            .bg-elements, #scrollTop {
+                display: none;
+            }
+        }
+        
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        a:focus, button:focus {
+            outline: 3px solid var(--accent-orange);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-green);
+            color: white;
+            padding: 8px 16px;
+            z-index: 2000;
+            transition: top 0.3s;
+            border-radius: 0 0 8px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Fade-in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
     </style>
 </head>
 
 <body>
 
-<header>
-
-    <!-- LOGOS SECTION -->
-    <div class="logos">
-        <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" alt="School Logo">
-        <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
-        <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+    <a href="#main-content" class="skip-link">Skip to credits</a>
+    
+    
+    <div class="bg-elements" aria-hidden="true">
+        <i class="fas fa-award leaf" style="top: 10%; left: 8%; animation-delay: 0s;"></i>
+        <i class="fas fa-handshake leaf" style="top: 25%; right: 12%; animation-delay: 3s;"></i>
+        <i class="fas fa-users leaf" style="top: 45%; left: 18%; animation-delay: 1.5s;"></i>
+        <i class="fas fa-award leaf" style="top: 65%; right: 22%; animation-delay: 4.5s;"></i>
+        <i class="fas fa-handshake leaf" style="top: 82%; left: 28%; animation-delay: 2s;"></i>
+        <i class="fas fa-users leaf" style="top: 35%; right: 8%; animation-delay: 5.5s;"></i>
+        <i class="fas fa-award leaf" style="top: 72%; left: 38%; animation-delay: 0.8s;"></i>
+        <i class="fas fa-handshake leaf" style="top: 18%; right: 32%; animation-delay: 3.8s;"></i>
     </div>
 
-    <h1>Project Credits</h1>
-    <p>NSS Tree Information & Awareness Initiative</p>
+    <header>
+        <div class="logos">
+            <img src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png" alt="School Logo" title="Saint Soldiers International School">
+            <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo" title="National Service Scheme">
+            <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo" title="My Bharat Initiative">
+        </div>
 
-</header>
+        <h1><i class="fas fa-trophy"></i> Project Credits</h1>
+        <p>NSS Tree Information & Awareness Initiative</p>
+        <div class="header-badge">
+            <i class="fas fa-seedling"></i> Growing Knowledge, One Tree at a Time
+        </div>
+    </header>
 
-<div class="container">
+    <div class="container">
+        
 
-    <div class="card">
-        <h2>🌱 Project Title</h2>
-        <p class="highlight">
-            Tree Information System using QR Codes
+        <div class="card featured-contributor fade-in">
+            <h2><i class="fas fa-star"></i> Featured Contributors</h2>
+            <p style="margin-bottom: 18px; color: var(--light-text);">
+                This project represents a powerful collaboration between educational institution, national service, and professional expertise.
+            </p>
+            
+            <div class="contributor-grid">
+                <div class="contributor-card">
+                    <div class="contributor-avatar" style="background: linear-gradient(135deg, #2e7d32, #388e3c);">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="contributor-name">Saint Soldiers International School</div>
+                    <span class="contributor-role"><i class="fas fa-map-marker-alt"></i> Sector 28-B, Chandigarh</span>
+                    <span class="contributor-role"><i class="fas fa-certificate"></i> CBSE Affiliated • Est. 2008</span>
+                    <div class="contributor-links">
+                        <a href="https://ssis.ac.in/" target="_blank" rel="noopener">
+                            <i class="fas fa-globe"></i> Official Website
+                        </a>
+                    </div>
+                </div>
+                
+
+                <div class="contributor-card">
+                    <div class="contributor-avatar" style="background: linear-gradient(135deg, #1565c0, #1976d2);">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="contributor-name">National Service Scheme</div>
+                    <span class="contributor-role"><i class="fas fa-landmark"></i> Government of India</span>
+                    <span class="contributor-role"><i class="fas fa-heart"></i> Motto: "Not Me But You"</span>
+                    <div class="contributor-links">
+                        <a href="https://nss.gov.in/" target="_blank" rel="noopener">
+                            <i class="fas fa-globe"></i> NSS Portal
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contributor-card">
+                    <div class="contributor-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="contributor-name">PARAS DHIMAN</div>
+                    <span class="contributor-role"><i class="fas fa-leaf"></i> NSS Volunteer, SSIS</span>
+                    <span class="contributor-role"><i class="fas fa-code"></i> Project Lead & Developer</span>
+                    <div class="contributor-links">
+                        <a href="https://softwarelabschd.github.io/softwarelabs" target="_blank" rel="noopener">
+                            <i class="fas fa-briefcase"></i> Professional Portfolio
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contributor-card">
+                    <div class="contributor-avatar" style="background: linear-gradient(135deg, #6a1b9a, #4a148c);">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="contributor-name">SoftwareLabs</div>
+                    <span class="contributor-role"><i class="fas fa-building"></i> Digital Solutions Partner</span>
+                    <span class="contributor-role"><i class="fas fa-lightbulb"></i> Privacy-First Web Development</span>
+                    <div class="softwarelabs-badge">
+                        <i class="fas fa-star"></i> SoftwareLabsChd.github.io/softwarelabs
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-tree"></i> Project Title</h2>
+            <p class="highlight">
+                <i class="fas fa-qrcode"></i> Tree Information System using QR Codes
+            </p>
+            <p style="margin-top: 12px; color: var(--light-text);">
+                An innovative eco-educational initiative combining technology with environmental awareness.
+            </p>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-palette"></i> NSS Theme / Topic</h2>
+            <p>
+                <strong><i class="fas fa-paint-brush"></i> Colours of Indian Culture</strong><br>
+                <strong><i class="fas fa-broom"></i> Swachh Bharat Abhiyan</strong>
+            </p>
+            <div class="stats-grid" style="margin-top: 15px;">
+                <div class="stat-item">
+                    <i class="fas fa-tree stat-icon"></i>
+                    <span class="stat-value">16+</span>
+                    <span class="stat-label">Trees Cataloged</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-qrcode stat-icon"></i>
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">QR Coverage</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users stat-icon"></i>
+                    <span class="stat-value">200+</span>
+                    <span class="stat-label">Students Impacted</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-school"></i> School</h2>
+            <p style="font-size: 1.15rem; margin-bottom: 12px;">
+                <strong><i class="fas fa-award"></i> Saint Soldiers International School</strong>
+            </p>
+            <ul>
+                <li>CBSE-affiliated, English-medium, co-educational institution</li>
+                <li>Sector 28-B, Chandigarh • Excellence in academics & values</li>
+                <li>Holistic development: Sports, Technology, Culture, Service</li>
+                <li>Preparing confident, responsible, globally-minded citizens</li>
+            </ul>
+            <div style="margin-top: 15px; text-align: center;">
+                <a href="https://ssis.ac.in/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; background: var(--light-green); color: var(--primary-green); text-decoration: none; border-radius: 50px; font-weight: 600; transition: var(--transition);">
+                    <i class="fas fa-external-link-alt"></i> Visit School Website
+                </a>
+            </div>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-chalkboard-teacher"></i> NSS Programme Officer</h2>
+            <p style="display: flex; align-items: center; gap: 12px; font-size: 1.1rem;">
+                <span style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.3rem; flex-shrink: 0;">
+                    <i class="fas fa-user-tie"></i>
+                </span>
+                <span><strong>Saurabh Sir</strong><br><span style="font-size: 0.95rem; color: var(--light-text);">Guiding NSS volunteers towards impactful community service</span></span>
+            </p>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-user-graduate"></i> Student Contributor</h2>
+            <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.8rem; flex-shrink: 0; box-shadow: var(--shadow-md);">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <p style="margin: 0; font-size: 1.05rem;">NSS Volunteer</p>
+                    <p class="highlight" style="font-size: 1.3rem; margin: 5px 0;">
+                        <i class="fas fa-user"></i> Paras Dhiman
+                    </p>
+                    <p style="margin: 8px 0 0; color: var(--light-text); font-size: 0.95rem;">
+                        <i class="fas fa-code"></i> Professional Builder & Founder, SoftwareLabs
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                <a href="https://softwarelabschd.github.io/softwarelabs" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; background: linear-gradient(135deg, #6a1b9a, #4a148c); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: var(--transition);">
+                    <i class="fas fa-briefcase"></i> SoftwareLabs Portfolio
+                </a>
+                <a href="mailto:softwarelabschd@gmail.com" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 18px; background: var(--light-green); color: var(--primary-green); text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 0.9rem; transition: var(--transition);">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-tools"></i> Work Contribution</h2>
+            <ul>
+                <li><i class="fas fa-paint-brush"></i> Website Design & Development (HTML5, CSS3, JavaScript)</li>
+                <li><i class="fas fa-search"></i> Tree Information Research & Content Curation</li>
+                <li><i class="fas fa-qrcode"></i> QR Code Generation, Integration & Testing</li>
+                <li><i class="fas fa-book-open"></i> Digital Awareness Content Creation</li>
+                <li><i class="fas fa-shield-alt"></i> Privacy-First Architecture & Security Implementation</li>
+                <li><i class="fas fa-mobile-alt"></i> Mobile-Optimized Responsive Design</li>
+            </ul>
+        </div>
+
+        <div class="card fade-in">
+            <h2><i class="fas fa-bullseye"></i> Purpose of the Project</h2>
+            <div class="purpose-grid">
+                <div class="purpose-card">
+                    <i class="fas fa-tree purpose-icon"></i>
+                    <span class="purpose-title">Tree Awareness</span>
+                    <span style="font-size: 0.9rem;">Promote knowledge about Indian trees & biodiversity</span>
+                </div>
+                <div class="purpose-card">
+                    <i class="fas fa-broom purpose-icon"></i>
+                    <span class="purpose-title">Swachh Bharat</span>
+                    <span style="font-size: 0.9rem;">Encourage cleanliness & environmental sustainability</span>
+                </div>
+                <div class="purpose-card">
+                    <i class="fas fa-lightbulb purpose-icon"></i>
+                    <span class="purpose-title">Tech Education</span>
+                    <span style="font-size: 0.9rem;">Use QR technology for interactive learning experiences</span>
+                </div>
+                <div class="purpose-card">
+                    <i class="fas fa-hands-helping purpose-icon"></i>
+                    <span class="purpose-title">Community Service</span>
+                    <span style="font-size: 0.9rem;">Embody NSS motto: "Not Me But You" through action</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card fade-in" style="background: linear-gradient(135deg, #fff8e1, #ffecb3); border-left-color: #ffa000;">
+            <h2><i class="fas fa-heart"></i> Special Acknowledgements</h2>
+            <ul>
+                <li><strong>School Administration</strong> for supporting student-led initiatives</li>
+                <li><strong>NSS Unit Members</strong> for fieldwork, tree survey & QR installation</li>
+                <li><strong>Teachers & Staff</strong> for guidance and educational insights</li>
+                <li><strong>GitHub</strong> for secure, free hosting via GitHub Pages</li>
+                <li><strong>Font Awesome & Google Fonts</strong> for beautiful, accessible design assets</li>
+                <li><strong>You</strong> — for visiting and supporting environmental education! 🌱</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        © NSS Tree Awareness Project 🌿<br>
+        <span style="display: block; margin: 8px 0; font-weight: 500;">
+            <i class="fas fa-school"></i> Saint Soldiers International School • 
+            <i class="fas fa-flag"></i> National Service Scheme • 
+            <i class="fas fa-code"></i> SoftwareLabs
+        </span>
+        <div class="by">
+            <i class="fas fa-heart"></i> BY – PARAS DHIMAN
+        </div>
+        <p style="margin-top: 15px; font-size: 0.95rem; color: var(--light-text);">
+            <i class="fas fa-globe"></i> Professional Portfolio: 
+            <a href="https://softwarelabschd.github.io/softwarelabs" target="_blank" rel="noopener">SoftwareLabsChd.github.io/softwarelabs</a>
         </p>
-    </div>
+    </footer>
 
-    <div class="card">
-        <h2>🎯 NSS Theme / Topic</h2>
-        <p>
-            <strong>Colours of Indian Culture</strong><br>
-            <strong>Swachh Bharat Abhiyan</strong>
-        </p>
-    </div>
+    <button id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <div class="card">
-        <h2>🏫 School</h2>
-        <p><strong>Saint Soldiers International School</strong></p>
-    </div>
+    <script>
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
-    <div class="card">
-        <h2>👨‍🏫 NSS Programme Officer</h2>
-        <p><strong>Saurabh Sir</strong></p>
-    </div>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(15px)';
+                el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(el);
+            });
 
-    <div class="card">
-        <h2>👨‍🎓 Student Contributor</h2>
-        <p>
-            NSS Volunteer<br>
-            <span class="highlight">Paras Dhiman</span>
-        </p>
-    </div>
+            const contributorCards = document.querySelectorAll('.contributor-card');
+            contributorCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
 
-    <div class="card">
-        <h2>💻 Work Contribution</h2>
-        <ul>
-            <li>Website Design (HTML & CSS)</li>
-            <li>Tree Information Research</li>
-            <li>QR Code Integration</li>
-            <li>Digital Awareness Content</li>
-        </ul>
-    </div>
+            const purposeCards = document.querySelectorAll('.purpose-card');
+            purposeCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-6px)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+        });
 
-    <div class="card">
-        <h2>🌍 Purpose of the Project</h2>
-        <ul>
-            <li>Promote awareness about Indian trees</li>
-            <li>Encourage cleanliness and sustainability</li>
-            <li>Support Swachh Bharat Abhiyan</li>
-            <li>Use technology for environmental education</li>
-        </ul>
-    </div>
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-nav');
+            }
+        });
+        
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-nav');
+        });
 
-</div>
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.leaf').forEach(leaf => {
+                leaf.style.animation = 'none';
+            });
+            document.querySelectorAll('.fade-in').forEach(el => {
+                el.style.animation = 'none';
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        }
 
-<footer>
-    © NSS Tree Awareness Project 🌿  
-    <div class="by">BY – PARAS DHIMAN</div>
-</footer>
-
+        console.log('%c🏆 Credits Page Loaded', 'color: #2e7d32; font-weight: bold; font-size: 14px;');
+        console.log('%cProject: NSS Tree QR Awareness Initiative', 'color: #388e3c;');
+        console.log('%cCreator: PARAS DHIMAN | SoftwareLabs', 'color: #4a148c; font-weight: 600;');
+        console.log('%cPortfolio: https://softwarelabschd.github.io/softwarelabs', 'color: #6a1b9a;');
+    </script>
 </body>
 </html>
