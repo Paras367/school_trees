@@ -2,143 +2,1057 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>School Trees List | NSS Eco Initiative</title>
-
-    <!-- School favicon -->
-    <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>School Trees List | NSS Eco Initiative | Saint Soldiers International School</title>
+    <meta name="title" content="School Trees List | NSS Eco Awareness Initiative">
+    <meta name="description" content="Explore our campus trees: Mango, Neem, Ficus, Ashoka & more. Scan QR codes to learn scientific names, benefits, and environmental importance. NSS Initiative by Saint Soldiers International School, Chandigarh.">
+    <meta name="keywords" content="NSS, tree list, QR code, eco awareness, Saint Soldiers International School, Chandigarh, Mango tree, Neem tree, biodiversity, school project">
+    <meta name="author" content="Paras Dhiman">
+    <meta name="school" content="Saint Soldiers International School, Chandigarh - 28">
+    <meta name="organization" content="National Service Scheme (NSS), Government of India">
+    <meta name="theme-color" content="#2e7d32">
+    
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ssis.ac.in">
+    <meta property="og:title" content="School Trees List | NSS Eco Initiative">
+    <meta property="og:description" content="Browse all cataloged trees in our NSS Eco Awareness Project. Click to explore detailed profiles with QR-enabled learning.">
+    <meta property="og:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+    <meta property="og:site_name" content="Saint Soldiers International School - NSS Portal">
+    
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ssis.ac.in/nss-trees/list.html">
+    <meta property="twitter:title" content="School Trees List | NSS Eco Initiative">
+    <meta property="twitter:description" content="Browse all cataloged trees in our NSS Eco Awareness Project.">
+    <meta property="twitter:image" content="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "School Trees Catalog",
+      "description": "NSS Eco Awareness Initiative: Complete list of campus trees with QR code profiles",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Mango Tree", "url": "https://paras367.github.io/school_trees/mango.html"},
+        {"@type": "ListItem", "position": 2, "name": "Neem Tree", "url": "https://paras367.github.io/school_trees/neem.html"},
+        {"@type": "ListItem", "position": 3, "name": "Ficus Tree", "url": "https://paras367.github.io/school_trees/ficus.html"},
+        {"@type": "ListItem", "position": 4, "name": "Ashoka Tree", "url": "https://paras367.github.io/school_trees/Ashoka.html"},
+        {"@type": "ListItem", "position": 5, "name": "Amaltash Tree", "url": "https://paras367.github.io/school_trees/amaltash.html"}
+      ],
+      "provider": {
+        "@type": "EducationalOrganization",
+        "name": "Saint Soldiers International School",
+        "url": "https://ssis.ac.in"
+      }
+    }
+    </script>
+
+    <link rel="icon" href="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #f3fff6, #ffffff);
+        :root {
+            --primary-green: #2e7d32;
+            --secondary-green: #388e3c;
+            --light-green: #e8f5e9;
+            --accent-orange: #d84315;
+            --dark-text: #1f3b2c;
+            --light-text: #555;
+            --white: #ffffff;
+            --shadow-sm: 0 4px 10px rgba(0,0,0,0.12);
+            --shadow-md: 0 8px 25px rgba(0,0,0,0.15);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
             margin: 0;
-            padding: 16px;
-            color: #1f3b2c;
+            padding: 0;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Poppins', 'Merriweather', Arial, sans-serif;
+            background: linear-gradient(135deg, #f3fff6 0%, #e8f5e9 50%, #ffffff 100%);
+            margin: 0;
+            padding: 15px;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+        
 
+        .bg-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .leaf {
+            position: absolute;
+            color: rgba(46, 125, 50, 0.12);
+            font-size: 1.8rem;
+            animation: float 18s infinite linear;
+            opacity: 0;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.8; }
+            100% { transform: translateY(-100px) rotate(720deg) scale(1.2); opacity: 0; }
+        }
+        
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: auto;
-            background: #ffffff;
-            border-radius: 18px;
-            padding: 26px;
-            box-shadow: 0 6px 22px rgba(46, 125, 50, 0.18);
+            background: rgba(255, 255, 255, 0.96);
+            padding: 28px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 10;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(46, 125, 50, 0.25);
         }
+        
 
-        .logos {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-bottom: 18px;
-        }
-
-        .logos img {
-            height: 70px;
-        }
-
-        h1 {
+        .header-section {
             text-align: center;
-            color: #2e7d32;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            text-align: center;
-            font-weight: bold;
-            color: #c62828;
+            padding-bottom: 18px;
+            border-bottom: 2px solid var(--light-green);
             margin-bottom: 22px;
         }
+        
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin: 12px 0;
+        }
+        
+        .logos img {
+            height: 75px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+        
+        .logos img:hover {
+            transform: scale(1.06);
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary-green);
+            margin: 18px 0 8px;
+            font-size: 2.1rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 12px;
+        }
+        
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 4px;
+            background: var(--secondary-green);
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 12px 0 22px;
+            font-size: 1.15rem;
+            letter-spacing: 0.3px;
+            padding: 10px 15px;
+            background: rgba(198, 40, 40, 0.08);
+            border-radius: 12px;
+            display: inline-block;
+            width: 100%;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .subtitle i {
+            margin-right: 6px;
+            color: var(--primary-green);
+        }
+        
 
-        ul {
+        .search-container {
+            margin: 20px 0 25px;
+            position: relative;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            border: 2px solid var(--light-green);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: inherit;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            outline: none;
+        }
+        
+        .search-box:focus {
+            border-color: var(--secondary-green);
+            box-shadow: 0 0 0 4px rgba(56, 142, 60, 0.15);
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-green);
+            font-size: 1.1rem;
+            pointer-events: none;
+        }
+        
+        .filter-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 15px 0 25px;
+        }
+        
+        .filter-tag {
+            padding: 6px 16px;
+            background: var(--light-green);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary-green);
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .filter-tag:hover, .filter-tag.active {
+            background: var(--secondary-green);
+            color: white;
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        
+        .filter-tag i {
+            font-size: 0.9rem;
+        }
+        
+
+        .tree-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
-
-        li {
-            background: #f1f8f5;
-            margin-bottom: 10px;
-            padding: 14px 18px;
-            border-radius: 12px;
-            transition: background 0.3s ease, transform 0.2s ease;
+        
+        .tree-item {
+            background: linear-gradient(135deg, #f8fdf9, #f1f8f5);
+            margin-bottom: 12px;
+            padding: 16px 20px;
+            border-radius: 16px;
+            transition: var(--transition);
+            border-left: 4px solid var(--secondary-green);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
         }
-
-        li:hover {
-            background: #e0f2e9;
-            transform: translateX(4px);
+        
+        .tree-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            transition: 0.7s;
+            z-index: 1;
         }
-
-        a {
+        
+        .tree-item:hover::before {
+            left: 100%;
+        }
+        
+        .tree-item:hover {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            transform: translateX(6px);
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--primary-green);
+        }
+        
+        .tree-icon {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            min-width: 36px;
+            text-align: center;
+            z-index: 2;
+            transition: var(--transition);
+        }
+        
+        .tree-item:hover .tree-icon {
+            transform: scale(1.15) rotate(3deg);
+            color: var(--accent-orange);
+        }
+        
+        .tree-link {
             text-decoration: none;
-            color: #1b5e20;
-            font-weight: bold;
+            color: var(--dark-text);
+            font-weight: 600;
             display: block;
+            flex: 1;
+            z-index: 2;
+            font-size: 1.05rem;
+            transition: var(--transition);
+            position: relative;
         }
+        
+        .tree-link:hover {
+            color: var(--primary-green);
+        }
+        
+        .tree-link::after {
+            content: "→";
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: var(--transition);
+            color: var(--secondary-green);
+            font-weight: bold;
+        }
+        
+        .tree-item:hover .tree-link::after {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .tree-scientific {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--light-text);
+            font-style: italic;
+            margin-top: 3px;
+            font-weight: 400;
+        }
+        
+        .tree-badge {
+            background: var(--primary-green);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+            white-space: nowrap;
+        }
+        
 
+        .home-item {
+            background: linear-gradient(135deg, #fff8e1, #ffecb3);
+            border-left-color: #ffa000;
+        }
+        
+        .home-item .tree-icon {
+            color: #ff8f00;
+            font-size: 1.9rem;
+        }
+        
+        .home-item:hover {
+            background: linear-gradient(135deg, #ffecb3, #ffe082);
+            border-left-color: #ff6f00;
+        }
+        
+        .home-item .tree-link {
+            color: #5d4037;
+        }
+        
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 25px 0;
+            padding: 15px;
+            background: rgba(232, 245, 233, 0.7);
+            border-radius: 16px;
+            font-weight: 500;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-green);
+        }
+        
+        .stat-item i {
+            font-size: 1.3rem;
+        }
+        
+        .stat-count {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--secondary-green);
+        }
+        
+        /* Footer */
         footer {
             text-align: center;
-            margin-top: 40px;
+            margin-top: 42px;
+            padding-top: 25px;
+            border-top: 2px solid var(--light-green);
+        }
+        
+        footer img {
+            height: 72px;
+            margin: 12px 0 15px;
+            transition: var(--transition);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+            opacity: 0.95;
+        }
+        
+        footer img:hover {
+            transform: scale(1.08);
+            opacity: 1;
+        }
+        
+        .by {
+            margin-top: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            font-weight: 600;
+            border-radius: 50px;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-md);
+            font-size: 1.05rem;
+            transition: var(--transition);
+        }
+        
+        .by:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--secondary-green), #2e7d32);
+        }
+        
+        .by i {
+            font-size: 1.1rem;
+        }
+        
+
+        #scrollTop {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(20px);
+            pointer-events: none;
+        }
+        
+        #scrollTop.show {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+        
+        #scrollTop:hover {
+            background: var(--secondary-green);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+
+        .no-results {
+            text-align: center;
+            padding: 30px;
+            color: var(--light-text);
+            font-style: italic;
+            display: none;
+        }
+        
+        .no-results.show {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .by {
-            margin-top: 18px;
-            display: inline-block;
-            padding: 10px 22px;
-            background: linear-gradient(to right, #2e7d32, #66bb6a);
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 1.9rem;
+            }
+            
+            .logos {
+                gap: 18px;
+            }
+            
+            .logos img {
+                height: 65px;
+            }
+            
+            .tree-item {
+                padding: 14px 18px;
+                flex-wrap: wrap;
+            }
+            
+            .tree-badge {
+                margin-top: 8px;
+            }
+            
+            .stats-bar {
+                gap: 18px;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px 16px;
+                border-radius: 18px;
+            }
+            
+            h1 {
+                font-size: 1.7rem;
+            }
+            
+            .subtitle {
+                font-size: 1.05rem;
+                padding: 8px 12px;
+            }
+            
+            .search-box {
+                padding: 12px 18px 12px 44px;
+                font-size: 0.95rem;
+            }
+            
+            .filter-tags {
+                gap: 8px;
+            }
+            
+            .filter-tag {
+                padding: 5px 14px;
+                font-size: 0.8rem;
+            }
+            
+            .tree-item {
+                padding: 13px 16px;
+            }
+            
+            .tree-icon {
+                font-size: 1.6rem;
+            }
+            
+            .tree-link {
+                font-size: 1rem;
+            }
+            
+            .by {
+                padding: 10px 24px;
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 15px;
+                max-width: 100%;
+            }
+            
+            .bg-elements, #scrollTop, .search-container, .filter-tags {
+                display: none;
+            }
+            
+            .tree-item {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        a:focus, button:focus, .filter-tag:focus {
+            outline: 3px solid var(--accent-orange);
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-green);
             color: white;
-            font-weight: bold;
-            border-radius: 30px;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: 8px 16px;
+            z-index: 2000;
+            transition: top 0.3s;
+            border-radius: 0 0 8px 0;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .loading {
+            background: linear-gradient(90deg, #f1f8f5 25%, #e8f5e9 50%, #f1f8f5 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: 16px;
+            height: 60px;
+            margin-bottom: 12px;
         }
     </style>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- Logos -->
-    <div class="logos">
-        <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
-        <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+    <a href="#main-content" class="skip-link">Skip to tree list</a>
+    
+
+    <div class="bg-elements" aria-hidden="true">
+        <i class="fas fa-leaf leaf" style="top: 10%; left: 8%; animation-delay: 0s;"></i>
+        <i class="fas fa-seedling leaf" style="top: 25%; right: 12%; animation-delay: 3s;"></i>
+        <i class="fas fa-tree leaf" style="top: 45%; left: 18%; animation-delay: 1.5s;"></i>
+        <i class="fas fa-leaf leaf" style="top: 65%; right: 22%; animation-delay: 4.5s;"></i>
+        <i class="fas fa-seedling leaf" style="top: 82%; left: 28%; animation-delay: 2s;"></i>
+        <i class="fas fa-tree leaf" style="top: 35%; right: 8%; animation-delay: 5.5s;"></i>
+        <i class="fas fa-leaf leaf" style="top: 72%; left: 38%; animation-delay: 0.8s;"></i>
+        <i class="fas fa-seedling leaf" style="top: 18%; right: 32%; animation-delay: 3.8s;"></i>
     </div>
+    
+    <div class="container">
+        <div class="header-section">
+            <div class="logos">
+                <img src="https://nss.gov.in/sites/all/themes/youthaffair/logo.png" alt="NSS Logo">
+                <img src="https://cdn-prod.mybharats.in/mybharat/assets/img/yuva_landing/mybharatlogo_opt_2x.png" alt="My Bharat Logo">
+            </div>
+            
+            <h1><i class="fas fa-list-ul"></i> School Trees Information</h1>
+            <div class="subtitle">
+                <i class="fas fa-leaf"></i> NSS Eco Awareness Initiative – <strong>NOT ME BUT YOU</strong>
+            </div>
+        </div>
 
-    <h1>🌳 School Trees Information</h1>
-    <div class="subtitle">NSS Eco Awareness Initiative – NOT ME BUT YOU</div>
 
-    <ul>
-        <li><a href="https://paras367.github.io/school_trees/index.html">🏫 Home / Project Overview</a></li>
-        <li><a href="https://paras367.github.io/school_trees/mango.html">🥭 Mango Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/neem.html">🌿 Neem Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/ficus.html">🌿 Ficus Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/Ashoka.html">🌳 Ashoka Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/amaltash.html">🌼 Amaltash Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/bamboo.html">🎋 Bamboo</a></li>
-        <li><a href="https://paras367.github.io/school_trees/kadam.html">🌳 Kadam Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/kush.html">🌾 Kush Grass</a></li>
-        <li><a href="https://paras367.github.io/school_trees/Sheesham.html">🪵 Sheesham Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/Bottlebrush.html">🧴 Bottle Brush Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/cactus.html">🌵 Tall Cactus Plant</a></li>
-        <li><a href="https://paras367.github.io/school_trees/champa.html">🌼 Champa Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/Mahua.html">🌳 Mahua Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/cheed.html">🌲 Cheedh (Udanta Pine) Tree</a></li>
-        <li><a href="https://paras367.github.io/school_trees/christmas.html">🎄 Christmas Tree</a></li>
-    </ul>
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" class="search-box" id="treeSearch" placeholder="Search trees (e.g., Mango, Neem, Ficus...)">
+        </div>
+        
+        <div class="filter-tags">
+            <span class="filter-tag active" data-filter="all">
+                <i class="fas fa-th-large"></i> All Trees
+            </span>
+            <span class="filter-tag" data-filter="flowering">
+                <i class="fas fa-flower"></i> Flowering
+            </span>
+            <span class="filter-tag" data-filter="medicinal">
+                <i class="fas fa-mortar-pestle"></i> Medicinal
+            </span>
+            <span class="filter-tag" data-filter="fruit">
+                <i class="fas fa-apple-alt"></i> Fruit Bearing
+            </span>
+            <span class="filter-tag" data-filter="shade">
+                <i class="fas fa-umbrella"></i> Shade Trees
+            </span>
+        </div>
+        
 
-    <footer>
-<div style="margin-top:20px;">
-        <img 
-            src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png"
-            alt="Saint Soldiers International School Logo"
-            style="height:70px; opacity:0.95;"
-        >
+        <div class="stats-bar">
+            <div class="stat-item">
+                <i class="fas fa-tree"></i>
+                <span>Total Trees: <span class="stat-count" id="treeCount">16</span></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-qrcode"></i>
+                <span>QR Codes: <span class="stat-count">100%</span></span>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Status: <span class="stat-count">Active</span></span>
+            </div>
+        </div>
+
+
+        <ul class="tree-list" id="treeList">
+            <li class="tree-item home-item" data-category="all">
+                <i class="fas fa-home tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/index.html" class="tree-link">
+                    🏫 Home / Project Overview
+                    <span class="tree-scientific">Return to main dashboard</span>
+                </a>
+                <span class="tree-badge">Start Here</span>
+            </li>
+            <li class="tree-item" data-category="fruit">
+                <i class="fas fa-mango tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/mango.html" class="tree-link">
+                    🥭 Mango Tree
+                    <span class="tree-scientific">Mangifera indica</span>
+                </a>
+                <span class="tree-badge">Fruit</span>
+            </li>
+            <li class="tree-item" data-category="medicinal">
+                <i class="fas fa-leaf tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/neem.html" class="tree-link">
+                    🌿 Neem Tree
+                    <span class="tree-scientific">Azadirachta indica</span>
+                </a>
+                <span class="tree-badge">Medicinal</span>
+            </li>
+            <li class="tree-item" data-category="shade">
+                <i class="fas fa-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/ficus.html" class="tree-link">
+                    🌿 Ficus Tree
+                    <span class="tree-scientific">Ficus religiosa</span>
+                </a>
+                <span class="tree-badge">Sacred</span>
+            </li>
+            <li class="tree-item" data-category="flowering">
+                <i class="fas fa-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/Ashoka.html" class="tree-link">
+                    🌳 Ashoka Tree
+                    <span class="tree-scientific">Saraca asoca</span>
+                </a>
+                <span class="tree-badge">Flowering</span>
+            </li>
+            <li class="tree-item" data-category="flowering">
+                <i class="fas fa-flower tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/amaltash.html" class="tree-link">
+                    🌼 Amaltash Tree
+                    <span class="tree-scientific">Cassia fistula</span>
+                </a>
+                <span class="tree-badge">Golden Shower</span>
+            </li>
+            <li class="tree-item" data-category="shade">
+                <i class="fas fa-seedling tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/bamboo.html" class="tree-link">
+                    🎋 Bamboo
+                    <span class="tree-scientific">Bambusoideae</span>
+                </a>
+                <span class="tree-badge">Fast Growing</span>
+            </li>
+            <li class="tree-item" data-category="flowering">
+                <i class="fas fa-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/kadam.html" class="tree-link">
+                    🌳 Kadam Tree
+                    <span class="tree-scientific">Neolamarckia cadamba</span>
+                </a>
+                <span class="tree-badge">Fragrant</span>
+            </li>
+            <li class="tree-item" data-category="medicinal">
+                <i class="fas fa-seedling tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/kush.html" class="tree-link">
+                    🌾 Kush Grass
+                    <span class="tree-scientific">Desmostachya bipinnata</span>
+                </a>
+                <span class="tree-badge">Sacred Grass</span>
+            </li>
+            <li class="tree-item" data-category="shade">
+                <i class="fas fa-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/Sheesham.html" class="tree-link">
+                    🪵 Sheesham Tree
+                    <span class="tree-scientific">Dalbergia sissoo</span>
+                </a>
+                <span class="tree-badge">Timber</span>
+            </li>
+            <li class="tree-item" data-category="flowering">
+                <i class="fas fa-brush tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/Bottlebrush.html" class="tree-link">
+                    🧴 Bottle Brush Tree
+                    <span class="tree-scientific">Callistemon viminalis</span>
+                </a>
+                <span class="tree-badge">Ornamental</span>
+            </li>
+            <li class="tree-item" data-category="medicinal">
+                <i class="fas fa-cactus tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/cactus.html" class="tree-link">
+                    🌵 Tall Cactus Plant
+                    <span class="tree-scientific">Cactaceae family</span>
+                </a>
+                <span class="tree-badge">Drought Resistant</span>
+            </li>
+            <li class="tree-item" data-category="flowering">
+                <i class="fas fa-flower tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/champa.html" class="tree-link">
+                    🌼 Champa Tree
+                    <span class="tree-scientific">Plumeria rubra</span>
+                </a>
+                <span class="tree-badge">Temple Flower</span>
+            </li>
+            <li class="tree-item" data-category="fruit">
+                <i class="fas fa-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/Mahua.html" class="tree-link">
+                    🌳 Mahua Tree
+                    <span class="tree-scientific">Madhuca longifolia</span>
+                </a>
+                <span class="tree-badge">Multipurpose</span>
+            </li>
+            <li class="tree-item" data-category="shade">
+                <i class="fas fa-pine-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/cheed.html" class="tree-link">
+                    🌲 Cheedh (Udanta Pine) Tree
+                    <span class="tree-scientific">Pinus roxburghii</span>
+                </a>
+                <span class="tree-badge">Himalayan</span>
+            </li>
+            <li class="tree-item" data-category="flowering">
+                <i class="fas fa-tree tree-icon"></i>
+                <a href="https://paras367.github.io/school_trees/christmas.html" class="tree-link">
+                    🎄 Christmas Tree
+                    <span class="tree-scientific">Araucaria bidwillii</span>
+                </a>
+                <span class="tree-badge">Evergreen</span>
+            </li>
+        </ul>
+
+        <div class="no-results" id="noResults">
+            <i class="fas fa-search" style="font-size: 2.5rem; color: var(--secondary-green); margin-bottom: 12px;"></i>
+            <p><strong>No trees found</strong> matching your search.</p>
+            <p style="margin-top: 8px; font-size: 0.95rem;">Try different keywords or browse all trees above.</p>
+        </div>
+
+        <footer>
+            <div style="margin-top:20px;">
+                <img 
+                    src="https://ssis.ac.in/wp-content/themes/ssis/assets/img/logo/ssislogo.png"
+                    alt="Saint Soldiers International School Logo"
+                    style="height:70px; opacity:0.95;"
+                >
+            </div>
+            <div class="by">
+                <i class="fas fa-heart"></i> BY – PARAS DHIMAN, NSS Volunteer, SSIS chd 28.
+            </div>
+            <div style="margin-top: 12px; font-size: 0.9rem; color: var(--light-text);">
+                <i class="fas fa-qrcode"></i> Scan QR codes on campus trees • 
+                <i class="fas fa-mobile-alt"></i> Mobile Optimized • 
+                <i class="fas fa-lock"></i> Privacy Focused
+            </div>
+        </footer>
     </div>
-    <div class="by">BY – PARAS DHIMAN, NSS Volunteer , SSIS chd 28.</div>
-</footer>
+    
 
+    <button id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-</div>
+    <script>
+
+        const searchInput = document.getElementById('treeSearch');
+        const treeList = document.getElementById('treeList');
+        const treeItems = document.querySelectorAll('.tree-item');
+        const noResults = document.getElementById('noResults');
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const scrollTopBtn = document.getElementById('scrollTop');
+        const treeCount = document.getElementById('treeCount');
+        
+
+        const actualTreeCount = treeItems.length - 1;
+        treeCount.textContent = actualTreeCount;
+        
+        // Search Functionality
+        searchInput.addEventListener('input', filterTrees);
+        
+        function filterTrees() {
+            const query = searchInput.value.toLowerCase().trim();
+            const activeFilter = document.querySelector('.filter-tag.active').dataset.filter;
+            let visibleCount = 0;
+            
+            treeItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                const category = item.dataset.category;
+                const isHome = item.classList.contains('home-item');
+                
+                // Always show home item if searching or filtering
+                if (isHome) {
+                    if (query === '' && (activeFilter === 'all' || activeFilter === category)) {
+                        item.style.display = 'flex';
+                        visibleCount++;
+                    } else if (query !== '') {
+                        // Show home item during search for easy navigation back
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                    return;
+                }
+                
+                // Filter by search query AND category
+                const matchesSearch = text.includes(query);
+                const matchesCategory = activeFilter === 'all' || category === activeFilter;
+                
+                if (matchesSearch && matchesCategory) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (visibleCount <= 1 && query !== '') { // 1 = home item
+                noResults.classList.add('show');
+            } else {
+                noResults.classList.remove('show');
+            }
+        }
+        
+        // Filter Tag Functionality
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Update active state
+                filterTags.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Re-filter trees
+                filterTrees();
+            });
+        });
+        
+        // Scroll to Top Button
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Enhanced hover effects for tree items
+        treeItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.zIndex = '5';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.zIndex = '1';
+            });
+        });
+        
+        // Keyboard navigation support
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchInput.value !== '') {
+                searchInput.value = '';
+                filterTrees();
+                searchInput.blur();
+            }
+        });
+        
+        // Accessibility: Focus management
+        document.querySelectorAll('.tree-link').forEach(link => {
+            link.addEventListener('focus', function() {
+                this.closest('.tree-item').style.boxShadow = '0 0 0 3px var(--accent-orange)';
+            });
+            link.addEventListener('blur', function() {
+                this.closest('.tree-item').style.boxShadow = '';
+            });
+        });
+
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('.leaf').forEach(leaf => {
+                leaf.style.animation = 'none';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            treeItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(15px)';
+                item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, 150 + (index * 60));
+            });
+        });
+    </script>
 </body>
 </html>
